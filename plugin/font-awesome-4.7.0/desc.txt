@@ -1,0 +1,7 @@
+使用 CSS
+复制 font-awesome 目录到你的项目中
+在<head>处加载font-awesome.min.css如下。
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+查看 案例 以获取 Font Awesome 的使用方法。
+
+//引自http://www.fontawesome.com.cn/get-started/
