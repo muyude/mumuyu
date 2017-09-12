@@ -1,0 +1,80 @@
+/*
+* 1.bactbox
+*     边框动画类
+* 2.
+*     宽高固定比例的盒子模型
+*
+*/
+
+/*borderactbox边框动画类*/
+
+    .bactbox{
+         position: relative;
+         min-height: 20px;
+         min-width: 20px;
+    }
+     .bactbox:before,.bactbox:after{
+     	position:absolute;
+        content:"";
+        display: block;
+        box-sizing: border-box ;
+        box-sizing: border-box;
+        width: 0;
+        height: 0;
+    }
+    .bactbox:before{
+    	top: 0;
+    	left: 0;
+        border-top: 1px solid #fff;
+        border-right: 1px solid #fff;
+        -webkit-transition: border-color 0.4s ease-in 0.4s,width 0.2s ease-in 0.6s,height 0.4s ease-in 0.2s;
+        transition: border-color 0.4s ease-in 0.4s,width 0.2s ease-in 0.6s,height 0.2s ease-in 0.4s;
+    }
+     .bactbox:hover:before{
+        width: 100%;
+        height: 100%;
+        border-color: blue;
+        -webkit-transition: border-color 0.4s ease-in 0s,width 0.2s ease-in 0s,height 0.2s ease-in 0.2s;
+        transition: border-color 0.4s ease-in 0s,width 0.2s ease-in 0s,height 0.2s ease-in 0.2s;
+
+     }
+     .bactbox:after{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-bottom: 1px solid #fff;
+        border-left: 1px solid #fff;
+        -webkit-transition: border-color 0.4s ease-in 0.4s,width 0.2s ease-in 0.2s,height 0.2s ease-in 0s;
+        transition: border-color 0.4s ease-in 0.4s,width 0.2s ease-in 0.2s,height 0.2s ease-in 0s;
+     }
+      .bactbox:hover:after{
+        width: 100%;
+        height: 100%;
+        border-color: blue;
+        -webkit-transition: border-color 0.4s ease-in 0s,width 0.2s ease-in 0.4s,height 0.2s ease-in 0.6s;
+        transition: border-color 0.4s ease-in 0s,width 0.2s ease-in 0.4s,height 0.2s ease-in 0.6s;
+     }
+/*2宽高固定比例的盒子模型*/
+/*html结构：<div class='fixed-ratio'>
+    <div class='ratio-dummy'></div>
+    <div class='ratio-content'>这里写内容</div>
+</div>*/
+    .fixed-ratio{
+    background-color: #fff;
+    width:100%;/*这里设置宽度，可以固定，也可以自适应*/
+    position:relative;
+    display: inline-block;
+    border-radius: 6px;
+	}
+	.ratio-dummy{
+	    margin-top: 65%;/*这里设置宽高比例50%表示1：2*/
+	}
+	.ratio-content{
+	    position:absolute;
+	    left:0;
+	    right:0;
+	    top:0;
+	    bottom: 0;
+	}
+  /*颜色*/
+  .color-skyblue{background-color:#ccffff;}
